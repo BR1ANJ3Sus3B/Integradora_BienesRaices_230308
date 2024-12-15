@@ -44,7 +44,7 @@ const emailRegistro = async (datos) => {
           <p style="margin: 0; font-size: 12px;">BienesRaices.com &copy; ${new Date().getFullYear()}</p>
         </div>
       </div>
-    `,
+    `,                                      
   });
 };
 
@@ -65,17 +65,17 @@ const emailOlvidePassword = async (datos) => {
     to: email,
     subject: 'Restablece tu contraseña en BienesRaices.com',
     html: `
-      <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: auto; border-radius: 10px; overflow: hidden;">
+      <div style="font-family: Arial, sans-serif; color: ; max-width: 600px; margin: auto; border-radius: 10px; overflow: hidden;">
         <!-- Encabezado con diseño actualizado -->
-        <div style="background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%); color: white; text-align: center; padding: 30px 20px;">
+        <div style="background: linear-gradient(90deg, #5C85EB 0%, #6CE6EA 100%); color: white; text-align: center; padding: 30px 20px;">
           <h1 style="margin: 0; font-size: 26px;">Restablece tu contraseña</h1>
         </div>
         <!-- Cuerpo del mensaje -->
-        <div style="padding: 20px; background-color: #f4f4f9;">
+        <div style="padding: 20px; background-color: #6DEAAB, #31EADF;">
           <p style="font-size: 16px; color: #555;">Hola <strong>${nombre}</strong>,</p>
           <p style="font-size: 16px; color: #555;">Has solicitado restablecer tu contraseña en <strong>BienesRaices.com</strong>. Para continuar, haz clic en el botón de abajo:</p>
           <div style="text-align: center; margin: 20px 0;">
-            <a href="${process.env.BACKEND_URL}:${process.env.PORT ?? 3001}/auth/olvide-password/${token}" style="background-color: #ff7eb3; color: white; padding: 12px 25px; text-decoration: none; font-size: 16px; border-radius: 5px; display: inline-block;">Restablecer contraseña</a>
+            <a href="${process.env.BACKEND_URL}:${process.env.PORT ?? 3001}/auth/olvide-password/${token}" style="background-color: #4FB7EB; color: white; padding: 12px 25px; text-decoration: none; font-size: 16px; border-radius: 5px; display: inline-block;">Restablecer contraseña</a>
           </div>
           <p style="font-size: 14px; color: #777;">Si tú no solicitaste este cambio, puedes ignorar este mensaje.</p>
         </div>
